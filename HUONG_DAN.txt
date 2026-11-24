@@ -1,0 +1,27 @@
+THÔNG BÁO TỪ AIO
+
+Chỉnh trực tiếp file notice.json trên nhánh main rồi commit để phát thông báo.
+Ứng dụng chỉ đọc file công khai này, không cần token GitHub trên máy người dùng.
+
+Các trường:
+  version: mã thông báo dạng chuỗi. Ví dụ: "2026-11-24-01".
+  enabled: true để bật, false để ngừng phát thông báo.
+  title: tiêu đề nội dung.
+  body: nội dung văn bản thuần. Dùng \n để xuống dòng, \n\n để ngắt đoạn.
+
+Khi muốn hiển thị lại, hãy thay version. Chỉ cần KHÁC version đã xem,
+không cần lớn hơn: "5" đổi thành "1" vẫn hiển thị.
+Chỉnh title/body nhưng giữ nguyên version sẽ không nhắc lại cho người đã xem.
+
+AIO bắt đầu kiểm tra sau khi đăng nhập và khởi động giao diện hoàn tất,
+sau đó kiểm tra mỗi 4 phút. Khi thu nhỏ app, thông báo mới được chờ đến
+khi cửa sổ chính được mở lại. Không giành màn hình khi app đang ở nền.
+
+Lịch sử được lưu tại:
+  %LOCALAPPDATA%\AIOLauncher\User Data\aio_notice.cfg
+Trên macOS/Linux dùng thư mục dữ liệu người dùng tương ứng.
+
+File hiện tại là thông báo thử nghiệm. Có thể thay toàn bộ title/body và version,
+hoặc đặt enabled thành false để tắt. File phải là JSON UTF-8 hợp lệ.
+Giới hạn: version 128 ký tự; title 512 ký tự; body 60.000 ký tự.
+Thông báo không chạy lệnh, không tải/cài phần mềm, không hỗ trợ HTML.
