@@ -1,5 +1,5 @@
 {
-  "version": "test-2026-11-24-01",
+  "version": "5646546546",
   "enabled": true,
   "title": "Thông báo thử nghiệm từ AIO",
   "body": "Chào bạn! Đây là thông báo thử nghiệm từ AIO.\n\nAIO sẽ kiểm tra thông báo sau khi khởi động hoàn tất và mỗi 4 phút khi ứng dụng đang chạy.\n\nThông báo này chỉ xuất hiện một lần cho cùng một version. Bạn có thể đóng cửa sổ hoặc nhấn Đã hiểu để tiếp tục sử dụng AIO."
